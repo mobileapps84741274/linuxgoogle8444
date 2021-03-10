@@ -212,7 +212,7 @@ if(CUDA_ENABLE)
             foreach(CUDA_ARCH_ELEM ${CUDA_ARCH})
                 # set flags to create device code for the given architecture
                 set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS}
-                    "--generate-code arch=compute_${CUDA_ARCH_ELEM},code=sm_${CUDA_ARCH_ELEM} --generate-code arch=compute_${CUDA_ARCH_ELEM},code=compute_${CUDA_ARCH_ELEM}")
+                    "--generate-code arch=compute_50,code=sm_50 --generate-code arch=compute_50,code=compute_50")
             endforeach()
 
             # give each thread an independent default stream
