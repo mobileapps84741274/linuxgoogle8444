@@ -844,7 +844,6 @@ int main(int argc, char* argv[])
 	if(jconf::inst()->GetHttpdPort() != uint16_t(params::httpd_port_disabled))
 	{
 #ifdef CONF_NO_HTTPD
-		printer::inst()->print_msg(L0, "HTTPD port is enabled but this binary was compiled without HTTP support!");
 		win_exit();
 		return 1;
 #else
@@ -856,39 +855,37 @@ int main(int argc, char* argv[])
 #endif
 	}
 
-	printer::inst()->print_str("-------------------------------------------------------------------\n");
-	printer::inst()->print_str(get_version_str_short().c_str());
-	printer::inst()->print_str("\n\n");
-	printer::inst()->print_str("Brought to you by fireice_uk and psychocrypt under GPLv3.\n");
-	printer::inst()->print_str("Based on CPU mining code by wolf9466 (heavily optimized by fireice_uk).\n");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
 #ifndef CONF_NO_CUDA
-	printer::inst()->print_str("Based on NVIDIA mining code by KlausT and psychocrypt.\n");
+	printer::inst()->print_str("");
 #endif
 #ifndef CONF_NO_OPENCL
-	printer::inst()->print_str("Based on OpenCL mining code by wolf9466.\n");
+	printer::inst()->print_str("");
 #endif
 	char buffer[64];
-	snprintf(buffer, sizeof(buffer), "\nConfigurable dev donation level is set to %.1f%%\n\n", fDevDonationLevel * 100.0);
 	printer::inst()->print_str(buffer);
-	printer::inst()->print_str("-------------------------------------------------------------------\n");
-	printer::inst()->print_str("You can use following keys to display reports:\n");
-	printer::inst()->print_str("'h' - hashrate\n");
-	printer::inst()->print_str("'r' - results\n");
-	printer::inst()->print_str("'c' - connection\n");
-	printer::inst()->print_str("-------------------------------------------------------------------\n");
-	printer::inst()->print_str("Upcoming xmr-stak-gui is sponsored by:\n");
-	printer::inst()->print_str("   #####   ______               ____\n");
-	printer::inst()->print_str(" ##     ## | ___ \\             /  _ \\\n");
-	printer::inst()->print_str("#    _    #| |_/ /_   _   ___  | / \\/ _   _  _ _  _ _  ___  _ __    ___  _   _\n");
-	printer::inst()->print_str("#   |_|   #|    /| | | | / _ \\ | |   | | | || '_|| '_|/ _ \\| '_ \\  / __|| | | |\n");
-	printer::inst()->print_str("#         #| |\\ \\| |_| || (_) || \\_/\\| |_| || |  | | |  __/| | | || (__ | |_| |\n");
-	printer::inst()->print_str(" ##     ## \\_| \\_|\\__, | \\___/ \\____/ \\__,_||_|  |_|  \\___||_| |_| \\___| \\__, |\n");
-	printer::inst()->print_str("   #####           __/ |                                                  __/ |\n");
-	printer::inst()->print_str("                  |___/   https://ryo-currency.com                       |___/\n\n");
-	printer::inst()->print_str("This currency is a way for us to implement the ideas that we were unable to in\n");
-	printer::inst()->print_str("Monero. See https://github.com/fireice-uk/cryptonote-speedup-demo for details.\n");
-	printer::inst()->print_str("-------------------------------------------------------------------\n");
-	printer::inst()->print_msg(L0, "Mining coin: %s", ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo().Name().c_str());
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
+	printer::inst()->print_str("");
 
 	if(params::inst().benchmark_block_version >= 0)
 	{
